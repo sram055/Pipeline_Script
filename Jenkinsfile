@@ -18,7 +18,7 @@ pipeline {
                     sh './deploy.sh'
                 }
                 timeout(time: 3, unit: 'MINUTES') {
-                    sh 'Quality.sh'
+                    sh 'echo "Quality.sh"'
                 }
             }
         }
