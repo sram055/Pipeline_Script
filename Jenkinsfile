@@ -15,7 +15,7 @@ pipeline {
 		stage('Deploy') {
             	steps {
                 retry(3) {
-                    sh './deploy.sh'
+                    sh 'echo "./deploy.sh"'
                 }
                 timeout(time: 3, unit: 'MINUTES') {
                     sh 'echo "Quality.sh"'
